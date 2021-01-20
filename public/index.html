@@ -5,11 +5,41 @@
     <link rel="icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Web site created using create-snowpack-app" />
-    <title>Snowpack App</title>
+    <title>Form Demo</title>
   </head>
   <body>
+    <header class="App-header">
+      <h1>Forms Comparison</h1>
+    </header>
+    <link rel="stylesheet" href="index.css" />
+    <section>
+      <h2>Native Form</h2>
+      <form id="native-form" class="form">
+        <div class="form-field">
+          <label htmlFor="name" class="label">Name</label>
+          <input type="text" name="name" id="name" class="text-field" required value="test" />
+        </div>
+
+        <div class="form-field">
+          <label htmlFor="age" class="label">Age</label>
+          <input
+            type="number"
+            name="age"
+            id="age"
+            class="number-field"
+            min="0"
+            max="150"
+            step="1"
+            required
+          />
+        </div>
+        <input type="submit" value="Submit!" width="5rem" />
+      </form>
+    </section>
+
     <div id="root"></div>
     <noscript>You need to enable JavaScript to run this app.</noscript>
+    <script type="module" src="nativeForm.js"></script>
     <script type="module" src="/dist/index.js"></script>
     <!--
       This HTML file is a template.
